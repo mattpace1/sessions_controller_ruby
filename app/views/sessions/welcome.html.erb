@@ -2,8 +2,7 @@
 
 <%if logged_in?%>
     <h1>You are Logged In, <%= current_user.username %></h1>
+<%else%>
+    <h1>You are Not Logged In</h1>
 <%end%>
-
-
-
 

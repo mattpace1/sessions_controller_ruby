@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= button_to "Home", '/welcome', method: :get%>
     <%= button_to "Login", '/login', method: :get%>
     <%= button_to "Create User", '/users/new', method: :get%>
     <%= form_tag '/logout' do%>
