@@ -7,5 +7,9 @@ Rails.application.routes.draw do
   post 'logout', to: 'sessions#logout'
   get 'welcome', to: 'sessions#welcome'
   get 'authorized', to: 'sessions#page_requires_login'
+
+  get 'active', to: 'sessions#active'
+  get 'timeout', to: 'sessions#timeout'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

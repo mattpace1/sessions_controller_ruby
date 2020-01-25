@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(username: params[:username])
-    if user && user.authenticate(params[:password])
-        session[:user_id] = user.id 
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id 
         redirect_to '/authorized'
     else
       redirect_to '/login'
@@ -28,6 +28,14 @@ class SessionsController < ApplicationController
   def logout
     session.delete(:user_id)
     redirect_to '/welcome' 
+  end
+
+  def active
+    render_session_status
+  end
+ 
+  def timeout
+    render_session_timeout
   end
 
 end

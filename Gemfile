@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+#Gem to create a timeout to auto logout inactive users
+gem 'auto-session-timeout', '~> 0.9.6'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use postgresql as the database for Active Record
@@ -20,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
+
+#Used to encrypt password
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
